@@ -1,0 +1,76 @@
+@keyframes scale {
+  from {
+    width: 50px;
+    height: 50px;
+  }
+
+  to {
+    width: 200px;
+    height: 200px;
+  }
+}
+@keyframes before {
+	from{
+		bottom: 0px;
+        left: -25px;
+	}
+	to{
+		bottom: 0px;
+		left: -100px;
+	}
+}
+@keyframes after{
+	from{
+		top: -25px;
+        right: 0px;
+	}
+	to{
+		top: -100px;
+		right:0px;
+	}
+}
+.heart-shape{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background-color: rgba(248, 147, 127, 1);
+    animation-name: scale;
+	animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.heart-shape:before{
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    content: '';
+    border-radius: 50%;
+    background-color: rgba(248, 147, 127, 1);
+    animation-name: scale, before;
+	animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.heart-shape:after{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    content: '';
+    border-radius: 50%;
+    background-color: rgba(248, 147, 127, 1);
+    animation-name: scale, after;
+	animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.heart-shape:before{
+    bottom: 0px;
+    left: -25px;
+}
+.heart-shape:after{
+    top: -25px;
+    right: 0px;
+}
